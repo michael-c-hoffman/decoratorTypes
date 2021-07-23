@@ -38,7 +38,6 @@ def testTimer():
     given a function log elapsed time
     """
     with LogCapture() as logCapture:
-        timelogger = logging.getLogger(__name__ + "::testTimer")
 
         @decoratorTypes.timer(1)
         def myFunction():

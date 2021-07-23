@@ -31,7 +31,10 @@ pytest-black = "^0.3.12"
 pytest-pylint = "^0.18.0"
 testfixtures = "^6.18.0"
 pytest-isort = "^2.0.0"
+poethepoet = "^0.10.0"
 
+[tool.poe.tasks]
+pytest = "pytest --isort --black --pylint -v"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
