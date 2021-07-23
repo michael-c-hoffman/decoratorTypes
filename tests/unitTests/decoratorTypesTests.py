@@ -46,8 +46,9 @@ def testTimer():
             """
             logging.info("Testing timer sleeping for 1s")
             time.sleep(1)
+            return 2 + 2
 
-        myFunction()
+        assert myFunction() == 4
         logger.info(myFunction.__doc__)
     # validate log capture
     # myFunction logs info "Testing timer sleeping for 1s

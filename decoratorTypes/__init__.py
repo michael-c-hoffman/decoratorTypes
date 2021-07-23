@@ -33,7 +33,7 @@ def timer(precision: typing.Optional[int] = None) -> typing.Callable:
         @functools.wraps(function)
         def wrapper_timer(*args, **kwargs):
             start_time = timeit.default_timer()
-            funcReturn = function(*args, **kwargs)
+            functionReturn = function(*args, **kwargs)
             elapsed = timeit.default_timer() - start_time
             if precision is None:
                 logger.info(f"def {function.__name__} elapsed time={elapsed}")
@@ -41,7 +41,7 @@ def timer(precision: typing.Optional[int] = None) -> typing.Callable:
                 logger.info(
                     f"def {function.__name__} elapsed time={elapsed:.{precision}f}"
                 )
-            return funcReturn
+            return functionReturn
 
         return wrapper_timer
 
