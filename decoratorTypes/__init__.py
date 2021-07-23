@@ -6,8 +6,8 @@ import logging
 import timeit
 import typing
 
-
 logger = logging.getLogger(__name__)
+
 
 def singleton(cls):
     """
@@ -28,6 +28,7 @@ def timer(precision: typing.Optional[int] = None) -> typing.Callable:
     """
     Make a timer decorator utilizing time
     """
+
     def decorator(function):
         @functools.wraps(function)
         def wrapper_timer(*args, **kwargs):
@@ -35,9 +36,13 @@ def timer(precision: typing.Optional[int] = None) -> typing.Callable:
             funcReturn = function(*args, **kwargs)
             elapsed = timeit.default_timer() - start_time
             if precision is None:
-                logger.info(f'def {function.__name__} elapsed time={elapsed}')
+                logger.info(f"def {function.__name__} elapsed time={elapsed}")
             else:
-                logger.info(f'def {function.__name__} elapsed time={elapsed:.{precision}f}')
+                logger.info(
+                    f"def {function.__name__} elapsed time={elapsed:.{precision}f}"
+                )
             return funcReturn
+
         return wrapper_timer
+
     return decorator

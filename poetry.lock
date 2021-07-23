@@ -478,6 +478,20 @@ pytest = ">=5.0,<6.0.0 || >6.0.0"
 pytest-metadata = "*"
 
 [[package]]
+name = "pytest-isort"
+version = "2.0.0"
+description = "py.test plugin to check import ordering using isort"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+isort = ">=4.0"
+
+[package.extras]
+tests = ["mock"]
+
+[[package]]
 name = "pytest-metadata"
 version = "1.11.0"
 description = "pytest plugin for test session metadata"
@@ -647,7 +661,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "57cf9c8623863b75b72798462310d8a1d66be20599945540de3650d54dbca8b5"
+content-hash = "684f4b9de09c9b0c03d77bca5c0b8ff7c2a7c1829823b4319a97a0c9ad48b6b9"
 
 [metadata.files]
 appdirs = [
@@ -1025,6 +1039,10 @@ pytest-forked = [
 pytest-html = [
     {file = "pytest-html-3.1.1.tar.gz", hash = "sha256:3ee1cf319c913d19fe53aeb0bc400e7b0bc2dbeb477553733db1dad12eb75ee3"},
     {file = "pytest_html-3.1.1-py3-none-any.whl", hash = "sha256:b7f82f123936a3f4d2950bc993c2c1ca09ce262c9ae12f9ac763a2401380b455"},
+]
+pytest-isort = [
+    {file = "pytest-isort-2.0.0.tar.gz", hash = "sha256:821a8c5c9c4f3a3c52cfa9c541fbe89ac9e28728125125af53724c4c3f129117"},
+    {file = "pytest_isort-2.0.0-py3-none-any.whl", hash = "sha256:ab949c593213dad38ba75db32a0ce361fcddd11d4152be4a2c93b85104cc4376"},
 ]
 pytest-metadata = [
     {file = "pytest-metadata-1.11.0.tar.gz", hash = "sha256:71b506d49d34e539cc3cfdb7ce2c5f072bea5c953320002c95968e0238f8ecf1"},
