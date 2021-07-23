@@ -1,5 +1,7 @@
 # decoratorTypes
 python decorators for multiple types
+
+
 ## Decorators
 * singleton - create a singleton class instance
 * timer - log info of time took to perform function
